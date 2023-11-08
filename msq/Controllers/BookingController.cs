@@ -35,7 +35,7 @@ namespace msq.Controllers
             db.Students.Add(s);
             db.SaveChanges();
 
-            return RedirectToAction("GetAllStudent");
+            return RedirectToAction("GetAllStudent","Class");
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

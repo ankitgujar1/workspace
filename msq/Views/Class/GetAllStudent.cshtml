@@ -1,2 +1,24 @@
-@model IEnumerable<msq.Models.Student>
 
+@model IEnumerable<msq.Models.Class>
+
+<table class="table table-striped">
+    <tr>
+        <th>Claas ID</th>
+        <th>Start Time</th>
+        <th>End Time</th>
+        <th>Capacity</th>
+        <th>Booking</th>
+    </tr>
+    @foreach (var i in Model)
+    {
+        <tr>
+            <td>@i.ClassID</td>
+            <td>@i.StartTime</td>
+            <td>@i.EndTime</td>
+            <td>@i.Capacity</td>
+            <td><a class="btn btn-primary" asp-action="ClassEnrollmentForm" asp-controller="Booking"
+                    asp-route-id=@i.ClassID>Book</a></td>
+            <td><a class="btn btn-primary" asp-action="D" asp-controller="Class" asp-route-id=@i.ClassID>D</a></td>
+        </tr>
+    }
+</table>
