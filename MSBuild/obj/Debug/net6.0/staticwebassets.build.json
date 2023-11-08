@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "QwX3sR7Db0KbCHzTfS90OaATOQA3mbaTQ8i/xoWtm/M=",
+  "Source": "MSBuild",
+  "BasePath": "_content/MSBuild",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
