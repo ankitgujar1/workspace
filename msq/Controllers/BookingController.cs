@@ -20,7 +20,8 @@ namespace msq.Controllers
         }
         public IActionResult ClassEnrollmentForm(int id)
         {
-            
+            var i=db.Classes.ClassID;
+            db.Students.
             return View();
         }
 
