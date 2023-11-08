@@ -27,7 +27,12 @@ namespace msq.Controllers
             this.db=db;
         }
 
-        public IActionResult Index()
+        public IActionResult AvailableClasses()
+        {
+            return View();
+        }
+
+        public IActionResult BookedClasses()
         {
             return View();
         }

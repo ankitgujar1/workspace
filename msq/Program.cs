@@ -1,4 +1,5 @@
-using 
+using msq.Models;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
