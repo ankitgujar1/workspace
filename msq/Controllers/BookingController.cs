@@ -18,11 +18,24 @@ namespace msq.Controllers
         public BookingController(MSQDbContext db){
             this.db=db;
         }
-        public IActionResult ClassEnrollmentForm(int id)
-        {
-            var i=db.Classes.Find(id);
-            
+
+        public IActionResult GetAllStudent(){
             return View();
+        }
+
+        [HttpPost]
+        public IActionResult ClassEnrollmentForm(int id, string name,string email)
+        {
+            var s=new Student{
+                Name=name,
+                Email=email,
+                ClassID=id
+            };
+            // var i=db.Classes.Find(id);
+            db.Students.Add(s);
+            db.SaveChanges();
+
+            return RedirectToAction("GetAllStudent");
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

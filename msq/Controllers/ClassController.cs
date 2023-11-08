@@ -30,18 +30,18 @@ namespace msq.Controllers
             return View(i);
         }
 
-        public IActionResult D(int id)
-        {
-            var n=db.Classes.Find(id);
-            var i=n.Capacity;
-            i--;
+        // public IActionResult D(int id)
+        // {
+        //     var n=db.Classes.Find(id);
+        //     var i=n.Capacity;
+        //     i--;
 
-            
 
-            db.Update(i);
-            db.SaveChanges();
-            return RedirectToAction("AvailableClasses");
-        }
+
+        //     db.Update(i);
+        //     db.SaveChanges();
+        //     return RedirectToAction("AvailableClasses");
+        // }
 
         public IActionResult BookedClasses()
         {
