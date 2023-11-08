@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Microsoft.EntityFrameworkCore;
 using msq.Models;
+using System.Collections;
+using System.Collections.Generic;
 
 namespace msq.Controllers
 {
@@ -14,12 +16,7 @@ namespace msq.Controllers
     public class ClassController : Controller
     {
 
-        private readonly ILogger<ClassController> _logger;
-
-        public ClassController(ILogger<ClassController> logger)
-        {
-            _logger = logger;
-        }
+        
 
         private MSQDbContext db;
 
@@ -29,13 +26,13 @@ namespace msq.Controllers
 
         public IActionResult AvailableClasses()
         {
-            var i=db.Classes.FirstOrDefault(c=>c.Capacity>0);
+            var i=db.Classes.Where(c=>c.Capacity>0);
             return View(i);
         }
 
         public IActionResult BookedClasses()
         {
-            var i=db.Classes.FirstOrDefault(c=>c.Capacity<=0);
+            var i=db.Classes.Select(c=>c.Capacity<=0).ToList();
             return View(i);
         }
 
