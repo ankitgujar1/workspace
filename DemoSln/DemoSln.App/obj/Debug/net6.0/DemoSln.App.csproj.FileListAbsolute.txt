@@ -1,0 +1,15 @@
+/home/coder/project/workspace/DemoSln/DemoSln.App/bin/Debug/net6.0/DemoSln.App
+/home/coder/project/workspace/DemoSln/DemoSln.App/bin/Debug/net6.0/DemoSln.App.deps.json
+/home/coder/project/workspace/DemoSln/DemoSln.App/bin/Debug/net6.0/DemoSln.App.runtimeconfig.json
+/home/coder/project/workspace/DemoSln/DemoSln.App/bin/Debug/net6.0/DemoSln.App.dll
+/home/coder/project/workspace/DemoSln/DemoSln.App/bin/Debug/net6.0/DemoSln.App.pdb
+/home/coder/project/workspace/DemoSln/DemoSln.App/obj/Debug/net6.0/DemoSln.App.csproj.AssemblyReference.cache
+/home/coder/project/workspace/DemoSln/DemoSln.App/obj/Debug/net6.0/DemoSln.App.GeneratedMSBuildEditorConfig.editorconfig
+/home/coder/project/workspace/DemoSln/DemoSln.App/obj/Debug/net6.0/DemoSln.App.AssemblyInfoInputs.cache
+/home/coder/project/workspace/DemoSln/DemoSln.App/obj/Debug/net6.0/DemoSln.App.AssemblyInfo.cs
+/home/coder/project/workspace/DemoSln/DemoSln.App/obj/Debug/net6.0/DemoSln.App.csproj.CoreCompileInputs.cache
+/home/coder/project/workspace/DemoSln/DemoSln.App/obj/Debug/net6.0/DemoSln.App.dll
+/home/coder/project/workspace/DemoSln/DemoSln.App/obj/Debug/net6.0/refint/DemoSln.App.dll
+/home/coder/project/workspace/DemoSln/DemoSln.App/obj/Debug/net6.0/DemoSln.App.pdb
+/home/coder/project/workspace/DemoSln/DemoSln.App/obj/Debug/net6.0/DemoSln.App.genruntimeconfig.cache
+/home/coder/project/workspace/DemoSln/DemoSln.App/obj/Debug/net6.0/ref/DemoSln.App.dll
