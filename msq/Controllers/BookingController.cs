@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using msq.Models;
 
 namespace msq.Controllers
 {
@@ -14,11 +15,12 @@ namespace msq.Controllers
        
         private MSQDbContext db;
 
-        public ClassController(MSQDbContext db){
+        public BookingController(MSQDbContext db){
             this.db=db;
         }
-        public IActionResult Index()
+        public IActionResult ClassEnrollmentForm(int id)
         {
+            var i=db.cl
             return View();
         }
 

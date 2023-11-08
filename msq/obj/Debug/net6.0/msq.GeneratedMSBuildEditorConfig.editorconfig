@@ -15,6 +15,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = /home/coder/project/workspace/msq
 build_property._RazorSourceGeneratorDebug = 
 
+[/home/coder/project/workspace/msq/Views/Booking/ClassEnrollmentForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQm9va2luZy9DbGFzc0Vucm9sbG1lbnRGb3JtLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [/home/coder/project/workspace/msq/Views/Class/AvailableClasses.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2xhc3MvQXZhaWxhYmxlQ2xhc3Nlcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

@@ -6,6 +6,7 @@
             <th>Start Time</th>
             <th>End Time</th>
             <th>Capacity</th>
+            <th>Booking</th>
         </tr>
             @foreach(var i in Model)
             {
@@ -14,7 +15,7 @@
                     <td>@i.StartTime</td>
                     <td>@i.EndTime</td>
                     <td>@i.Capacity</td>
-                    <td><a asp-action="Book"></a></td>
+                    <td><a class="btn btn-primary" asp-action="ClassEnrollmentForm" asp-controller="Booking" asp-route-id=@i.ClassID>Book</a></td>
                 </tr>
             }
 </table>
