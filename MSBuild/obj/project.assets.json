@@ -14,7 +14,7 @@
     "version": "1.0.0",
     "restore": {
       "projectUniqueName": "/home/coder/project/workspace/MSBuild/MSBuild.csproj",
-      "projectName": "MSBuild",
+      "projectName": "Hello",
       "projectPath": "/home/coder/project/workspace/MSBuild/MSBuild.csproj",
       "packagesPath": "/home/coder/.nuget/packages/",
       "outputPath": "/home/coder/project/workspace/MSBuild/obj/",

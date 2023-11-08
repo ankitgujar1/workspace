@@ -6,15 +6,15 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v6.0": {
-      "MSBuild/1.0.0": {
+      "Hello/1.0.0": {
         "runtime": {
-          "MSBuild.dll": {}
+          "Hello.dll": {}
         }
       }
     }
   },
   "libraries": {
-    "MSBuild/1.0.0": {
+    "Hello/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
