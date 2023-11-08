@@ -5,35 +5,21 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using Microsoft.EntityFrameworkCore;
-using msq.Models;
-using System.Collections;
-using System.Collections.Generic;
 
 namespace msq.Controllers
 {
     // [Route("[controller]")]
-    public class ClassController : Controller
+    public class BookingController : Controller
     {
-
-        
-
+       
         private MSQDbContext db;
 
         public ClassController(MSQDbContext db){
             this.db=db;
         }
-
-        public IActionResult AvailableClasses()
+        public IActionResult Index()
         {
-            var i=db.Classes.Where(c=>c.Capacity>0).ToList();
-            return View(i);
-        }
-
-        public IActionResult BookedClasses()
-        {
-            var i=db.Classes.Where(c=>c.Capacity<=0).ToList();
-            return View(i);
+            return View();
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
