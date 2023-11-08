@@ -5,9 +5,12 @@ using Microsoft.Extensions.Logging;
 
 public class Tests
 {
+    WeatherForecastController controllerForecast=null;
+
     [SetUp]
     public void Setup()
     {
+        controllerForecast=new WeatherForecastController(new MockObject());
     }
 
     [Test]
@@ -52,5 +55,12 @@ public class Tests
         {
            // throw new NotImplementedException();
         }
+
+        [Test]
+        public void Test3(){
+            // WeatherForecastController c=new WeatherForecastController();
+            var n=controllerForecast.PostData();
+            Assert.That(n,Is.EqualTo(100));
+        } 
     }
 }

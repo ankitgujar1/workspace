@@ -17,6 +17,16 @@ public class WeatherForecastController : ControllerBase
     {
         _logger = logger;
     }
+        
+    [HttpPost]
+    public int PostData(){
+        return 100;
+    }
+
+    [HttpPut]
+     public string DemoTest(IDisposable dispose){
+      return "disposed";
+     }
 
     [HttpGet(Name = "GetWeatherForecast")]
     public IEnumerable<WeatherForecast> Get()

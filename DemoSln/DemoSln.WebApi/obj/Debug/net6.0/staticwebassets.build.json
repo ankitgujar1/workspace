@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "F7rTuu91F23Xfzmx8UJQSyfMvE0KaM1rOe6GK7U8OPc=",
+  "Source": "DemoSln.WebApi",
+  "BasePath": "_content/DemoSln.WebApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
