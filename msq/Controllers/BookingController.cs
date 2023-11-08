@@ -21,7 +21,8 @@ namespace msq.Controllers
         public IActionResult ClassEnrollmentForm(int id)
         {
             var i=db.Classes.Find(id);
-            return View(i);
+            
+            return View();
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
