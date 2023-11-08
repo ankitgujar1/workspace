@@ -20,11 +20,8 @@ namespace msq.Controllers
         }
         public IActionResult ClassEnrollmentForm(int id)
         {
-            var i=db.Classes.ClassID;
-            db.Students.ClassID.Add(i);
-            db.SaveChanges();
-
-            return View(db.Students);
+            var i=db.Classes.Find(id);
+            return View(i);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
