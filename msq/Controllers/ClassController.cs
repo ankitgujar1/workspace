@@ -29,12 +29,14 @@ namespace msq.Controllers
 
         public IActionResult AvailableClasses()
         {
-            return View();
+            var i=db.Classes.FirstOrDefault(c=>c.Capacity>0);
+            return View(i);
         }
 
         public IActionResult BookedClasses()
         {
-            return View();
+            var i=db.Classes.FirstOrDefault(c=>c.Capacity<=0);
+            return View(i);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

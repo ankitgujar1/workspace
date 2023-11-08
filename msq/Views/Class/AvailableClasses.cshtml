@@ -1,0 +1,20 @@
+@model IEnumerable<msq.Models.Class>
+
+<table class="table table-striped">
+    <tr>
+            <th>Claas ID</th>
+            <th>Start Time</th>
+            <th>End Time</th>
+            <th>Capacity</th>
+        </tr>
+        <tbody>
+            @foreach(var i in Model)
+            {
+                <tr>
+                    <td>@i.ClassID</td>
+                    <td>@i.StartTime</td>
+                    <td>@i.EndTime</td>
+                    <td>@i.Capacity</td>
+                </tr>
+            }
+</table>
