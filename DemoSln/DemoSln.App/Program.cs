@@ -1,8 +1,21 @@
 ﻿// See https://aka.ms/new-console-template for more information
-public c
-Console.WriteLine("Hello, World!");
+namespace DemoSln{ 
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        Console.WriteLine("Hello, World!");
 
 
-int GetNum(){
-    return 100;
+    }
+        public int GetNum()
+        {
+            return 100;
+        }
+
+        public bool IsOk()
+        {
+            return true;
+        }
+}
 }

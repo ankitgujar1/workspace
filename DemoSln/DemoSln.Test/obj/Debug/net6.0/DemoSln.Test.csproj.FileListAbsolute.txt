@@ -97,3 +97,8 @@
 /home/coder/project/workspace/DemoSln/DemoSln.Test/obj/Debug/net6.0/DemoSln.Test.genruntimeconfig.cache
 /home/coder/project/workspace/DemoSln/DemoSln.Test/obj/Debug/net6.0/ref/DemoSln.Test.dll
 /home/coder/project/workspace/DemoSln/DemoSln.Test/bin/Debug/net6.0/CoverletSourceRootsMapping
+/home/coder/project/workspace/DemoSln/DemoSln.Test/bin/Debug/net6.0/DemoSln.App.deps.json
+/home/coder/project/workspace/DemoSln/DemoSln.Test/bin/Debug/net6.0/DemoSln.App.runtimeconfig.json
+/home/coder/project/workspace/DemoSln/DemoSln.Test/bin/Debug/net6.0/DemoSln.App
+/home/coder/project/workspace/DemoSln/DemoSln.Test/bin/Debug/net6.0/DemoSln.App.dll
+/home/coder/project/workspace/DemoSln/DemoSln.Test/bin/Debug/net6.0/DemoSln.App.pdb
