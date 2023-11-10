@@ -9,4 +9,12 @@
             {{i}}
         </li>
     </ol>
+
+    <table class="table table-striped">
+        <tr *ngFor="let i of names">
+            <td>{{i.fname}}</td>
+            <td>{{i.lname}}</td>
+            <td>{{i.age}}</td>
+        </tr>
+    </table>
 </div>

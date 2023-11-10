@@ -12,6 +12,15 @@ export class FirstComponent implements OnInit {
   ngOnInit() {
   }
   arr:string[]=["ankit","mustafa"];
+
+  names:object[]=[
+    {fname:"raghav",lname:"singh",age:2},
+    {fname:"raghav",lname:"singh",age:2},
+    {fname:"raghav",lname:"singh",age:2},
+    {fname:"raghav",lname:"singh",age:2},
+]
+
+  // employees:object[]=
   // colorStyle:string="color:green"
   // twoway:string="g";
   // save(event){
