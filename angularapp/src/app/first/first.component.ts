@@ -28,5 +28,35 @@ export class FirstComponent implements OnInit {
   // }
 
 
+  nme:string="deepa";
+     values:string =' ';
+
+     isValid:boolean = true;
+
+     onKey(event){
+      console.log(event.target.value);
+      this.values = event.target.value;
+     }
+     
+     days:string[] =["Mon","Tue","Wed","Thu","Fri","Sat","Sun"] 
+     dropValue:string= "";
+
+     SetDropValue(event){
+      this.dropValue = event.target.value;
+     }
+     students:object[] = [
+      {name:'Deepak',gender:'male'},
+      {name:'Deepa',gender:'female'},
+      {name:'Ashok',gender:'male'},
+      {name:'Anshu',gender:'female'},
+   
+      ]
+
+     save(event:any){
+      console.log(event);
+       this.values = event.target.value;
+     }
+
+
 
 }

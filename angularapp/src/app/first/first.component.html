@@ -18,3 +18,50 @@
         </tr>
     </table>
 </div>
+
+<h1>{{nme}}</h1>
+    <h1>{{values}}</h1>
+
+    
+        <input [(ngModel)]="nme">
+        <input (keyup)="onKey($event)">
+        <p>{{ values }}</p>
+     <!-- <input type="text" (change)='save($event)'></input> -->
+
+     <!-- <button (click) = "save($event)" value="Submit"></button> -->
+      
+    
+    <ol>
+    <li *ngFor="let day of days">{{day}}</li>
+
+    </ol>
+    
+    <div *ngIf="isValid">
+        <p>I am going to go</p>
+    </div>
+
+    <div *ngIf="!isValid">
+        <p>I am not going to go</p>
+    </div>
+    
+     <div *ngFor="let student of students">
+      <span [ngStyle]="{'background-color':student.gender === 'female' ? 'red': 'green' }">
+        Name:{{student.name}}, Gender:{{student.gender}}
+      </span>
+     </div>
+     
+        <h1>Select Country</h1>
+        <select (change)="SetDropValue($event)">
+          <option value=" "></option>
+          <option value="In">In</option>
+          <option value="Us">US</option>
+          <option value="Uk">UK</option>
+
+        </select>
+
+        <h1>You Selected</h1>
+        <div [ngSwitch]="dropValue">
+            <h2 *ngSwitchCase="'In'">India</h2>
+            <h2 *ngSwitchCase="'Us'">USA</h2>
+            <h2 *ngSwitchCase="'Uk'">United Kingdom</h2>
+        </div>
