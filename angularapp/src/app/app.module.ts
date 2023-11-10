@@ -8,13 +8,15 @@ import { FirstComponent } from './first/first.component';
 import { FormsModule } from '@angular/forms';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { FormComponent } from './form/form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FirstComponent,
     NavbarComponent,
-    SidebarComponent
+    SidebarComponent,
+    FormComponent
   ],
   imports: [
     BrowserModule,
