@@ -20,7 +20,13 @@ namespace msq.Controllers
         }
 
         public IActionResult GetAllStudent(){
-            return View();
+            var i=db.Students;
+            return View(i);
+        }
+
+        public IActionResult ClassEnrollmentForm(int id){
+            var i=db.Students.Find(id);
+            return View(i);
         }
 
         [HttpPost]
@@ -29,7 +35,7 @@ namespace msq.Controllers
             var s=new Student{
                 Name=name,
                 Email=email,
-                ClassID=id
+                // ClassID=id
             };
             // var i=db.Classes.Find(id);
             db.Students.Add(s);
