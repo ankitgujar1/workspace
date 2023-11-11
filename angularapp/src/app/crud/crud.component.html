@@ -11,3 +11,12 @@
 <h1>After TDS: {{n | tds:"pf"}}</h1>
 
 <h1>After TDS: {{n | tds:"fp"}}</h1>
+
+<table>
+    <tr *ngFor="let i  of emp">
+        <td>{{i.empId}}</td>
+        <td>{{i.name}}</td>
+        <td>{{i.loc}}</td>
+        <td>{{i.salary | currency:"CAD"}}</td>
+    </tr>
+</table>

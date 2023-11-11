@@ -12,9 +12,11 @@ export class CrudComponent
     n:number=1000000;
 
     emp:object[]=[
-        {empId:1,name:"ankit",loc:"saoner",salary:1000},
-        {empId:1,name:"mustafa",loc:"saoner",salary:2000},
-        {empId:1,name:"pooja",loc:"saoner",salary:32}
+        {empId:6,name:"ankit",loc:"saoner",salary:1000},
+        {empId:2,name:"mustafa",loc:"saoner",salary:2000},
+        {empId:3,name:"pooja",loc:"saoner",salary:3200}
     ]
+
+    user:object[]=[{}];
 
 }
