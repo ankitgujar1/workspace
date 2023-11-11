@@ -38,6 +38,12 @@ export class CrudComponent  {
       // console.log(this.userData);
       // console.log("aaaa");
       break;
+
+      case "upbtn":
+        let v=this.userData.find(x=>x.email==this.indiData.email);
+        console.log(v);
+      //  this.userData.push(this.indiData);
+      break;
     default:
       break;
    
