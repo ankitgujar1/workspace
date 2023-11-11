@@ -45,11 +45,17 @@ export class CrudComponent {
         //   }
         // });
 
-        let value = this.userData.find(x => x.email == this.indiData.email);
-        console.log(value);
+        this.userData.forEach((value,indx,arr)=>{
+          if(value.email==this.indiData.email){
+              console.log("same");
+          }
+      })
 
-
-        this.userData.push(this.indiData)
+      // let value = this.userData.find(x=>x.email == this.indiData.email) ;
+      //           console.log(value);
+               
+ 
+                 this.userData.push(this.indiData)
         break;
       default:
         break;
