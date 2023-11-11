@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { FormComponent } from './form/form.component';
+import { CrudComponent } from './crud/crud.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { FormComponent } from './form/form.component';
     FirstComponent,
     NavbarComponent,
     SidebarComponent,
-    FormComponent
+    FormComponent,
+    CrudComponent
   ],
   imports: [
     BrowserModule,
