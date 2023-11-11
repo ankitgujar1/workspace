@@ -8,7 +8,10 @@ export class TdsPipe implements PipeTransform {
     let tds=value-(value*.10);
     if(args.find(x=>x=="pf")){
       tds=tds-(tds*.028);
-      return tds;
+      // return tds;
+    }
+    if(args.find(x=>x=="fp")){
+      tds=tds-(tds*.5);
     }
     return tds;
   }
