@@ -10,6 +10,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { FormComponent } from './form/form.component';
 import { CrudComponent } from './crud/crud.component';
+import { PiPipe } from './pi.pipe';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { CrudComponent } from './crud/crud.component';
     NavbarComponent,
     SidebarComponent,
     FormComponent,
-    CrudComponent
+    CrudComponent,
+    PiPipe
   ],
   imports: [
     BrowserModule,
