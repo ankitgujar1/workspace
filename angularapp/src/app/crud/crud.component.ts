@@ -12,7 +12,7 @@ export class CrudComponent {
   ngOnInit() {
   }
   indiData: object = { email: " ", password: " ", isReady: false };
-  userData: object[] = [{ email: " ", password: " ", isReady: false }];
+  userData: object[] = [{}];
 
   dataHandler(event) {
     let ids: string = event.target.id;
@@ -39,11 +39,17 @@ export class CrudComponent {
         break;
 
       case "upbtn":
-        this.userData.forEach((val,indx,arr)=>{
-          if(val.email==this.indiData.email){
-            console.log(val);
-          }
-        });
+        // this.userData.forEach((val,indx,arr)=>{
+        //   if(val.email==this.indiData.email){
+        //     console.log(val);
+        //   }
+        // });
+
+        let value = this.userData.find(x => x.email == this.indiData.email);
+        console.log(value);
+
+
+        this.userData.push(this.indiData)
         break;
       default:
         break;
