@@ -5,13 +5,10 @@ import { Component } from "@angular/core";
     selector:'app-crud',
     templateUrl:'./crud.component.html'
 })
-export class CrudComponent implements PipeTransform
+export class CrudComponent
 {
     
     // date=new Date();
-    // n:number=1000000;
+    n:number=1000000;
 
-    transform(value: any, ...args: any[]) {
-        
-    }
 }
