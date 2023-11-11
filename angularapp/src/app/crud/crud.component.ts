@@ -1,6 +1,5 @@
-import { ThrowStmt } from "@angular/compiler";
 import { Component } from "@angular/core";
-import { timeStamp } from "console";
+ 
  
 @Component({
     selector:'app-crud',
@@ -8,38 +7,55 @@ import { timeStamp } from "console";
 })
 export class CrudComponent
 {
-  indiData:object = {email:" ",password:" ",isReady:false};
-  email:string = " "
-  password:string = ""
-  isReady:boolean = false;
-
-  userData:object[]=[{}];
-
-  
-
-  dataHandler(event){
- let id = event.target.id;
-
- if(id == "btn1"){
-     console.log(this.email);
-     console.log(this.password);
-     console.log(this.isReady);
-     this.userData.push({email:this.email,password:this.password,isReady:this.isReady})
-     console.log(this.userData)
- }
- else if(id=="upbtn"){
-
-  
-
-
- }
- else if(id=="emId"){
-    if(this.userData.length > 1){
-     let data= this.userData.find(x=>x.email == this.email);
-     this.password = data.password;
-     this.isReady= data.isReady;
-    }
+    indiData:object = {email:" ",password:" ",isReady:false};
+    userData:object[]=[{email:" ",password:" ",isReady:false}];
+ 
+    dataHandler(event){
+       let ids:string = event.target.id;
+       let data:any = event.target.value;
+       
+        switch (ids) {
+            case "emId":
+             this.indiData = {...this.indiData,email:data};
+             if(this.userData.length != 0){
+             let value =this.userData.find(x=>x.email == this.indiData.email);
+ 
+           
+             }
+                break;
+                case "psId":
+                    this.indiData={...this.indiData,password: data}
+                break;
+                case "chId":
+                   let chkVal = event.target.checked;
+                    this.indiData={...this.indiData,isReady: chkVal}
+                break;
+               
+                case "btn1":
+                 
+                 this.userData.push(this.indiData);
+               
+                break;
+                case "upbtn":
+                 
+                // this.userData.forEach((value,indx,arr)=>{
+                //   if(value.email == this.indiData.email){
+                   
+                //   }
+                // });
+                this.userData.forEach((value,indx,arr)=>{
+                    if(value.email==this.indiData.email){
+                        console.log("same");
+                    }
+                })
+                 //console.log(value);
+                 this.userData.push(this.indiData);
+               
+                break;
+       
+            default:
+                break;
+        }
+        console.log(event.target.id);
+  }
 }
-
-}
-} 
