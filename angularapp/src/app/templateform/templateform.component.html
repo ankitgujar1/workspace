@@ -18,7 +18,7 @@
             <p class="text-danger"> Lastname is required</p>
         </div>
 
-        <div *ngIf="fname.pristine && fname.touched">
+        <div *ngIf="lname.touched && fname.pristine">
             <p class="text-danger"> Firstname is required</p>
         </div>
     </div>
