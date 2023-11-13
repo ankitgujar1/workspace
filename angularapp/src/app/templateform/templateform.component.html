@@ -5,13 +5,13 @@
 
     <div class="form-group">
         <label for="firstname">First Name</label><br>
-        <input type="text" name="firstname" ngModel required>
-
+        <input type="text" name="firstname" #fname="ngModel" ngModel required>
+        <div *ngIf="fname.isvalid || fname.pr"></div>
     </div>
 
     <div class="form-group">
         <label for="lastname">Last Name</label> <br>
-        <input type="text" name="lastname" ngModel>
+        <input type="text" name="lastname" ngModel required>
     </div>
 
     <div class="form-group">
@@ -39,7 +39,7 @@
     </select>
 
     <div class="form-group">
-        <button class="btn btn-primary" type="submit">Submit</button>
+        <button [disabled]="contactForm.invalid" class="btn btn-primary" type="submit">Submit</button>
     </div>
 
 </form>
