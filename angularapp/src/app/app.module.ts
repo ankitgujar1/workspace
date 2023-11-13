@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FirstComponent } from './first/first.component';
@@ -13,6 +14,7 @@ import { CrudComponent } from './crud/crud.component';
 // import { PiPipe } from './pi.pipe';
 import { TdsPipe } from './pipe/tds.pipe';
 import { TemplateformComponent } from './templateform/templateform.component';
+import { HttpComponent } from './http/http.component';
 
 @NgModule({
   declarations: [
@@ -24,12 +26,14 @@ import { TemplateformComponent } from './templateform/templateform.component';
     CrudComponent,
     // PiPipe,
     TdsPipe,
-    TemplateformComponent
+    TemplateformComponent,
+    HttpComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
