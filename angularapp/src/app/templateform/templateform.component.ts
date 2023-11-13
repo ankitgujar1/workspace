@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-templateform',
@@ -19,8 +20,8 @@ export class TemplateformComponent implements OnInit {
   ];
 
 
-  onSubmit(contactForm) {
-    console.log(contactForm.value);
+  onSubmit(contactDetails:NgForm) {
+    console.log(contactDetails.value);
   }
 
 }
