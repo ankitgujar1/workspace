@@ -12,6 +12,7 @@ import { FormComponent } from './form/form.component';
 import { CrudComponent } from './crud/crud.component';
 // import { PiPipe } from './pi.pipe';
 import { TdsPipe } from './pipe/tds.pipe';
+import { TemplateformComponent } from './templateform/templateform.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { TdsPipe } from './pipe/tds.pipe';
     FormComponent,
     CrudComponent,
     // PiPipe,
-    TdsPipe
+    TdsPipe,
+    TemplateformComponent
   ],
   imports: [
     BrowserModule,
