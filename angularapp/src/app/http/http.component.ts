@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+// import { error } from 'console';
 
 @Component({
   selector: 'app-http',
@@ -11,7 +12,11 @@ export class HttpComponent implements OnInit {
   _http:HttpClient=null;
   constructor(http:HttpClient){ 
     this._http=http;
-    this._http.get("http://0.0.0.0:8080/weatherforecast").subscribe((data)=>)
+    this._http.get("https://www.google.com").subscribe((data)=>{
+      console.log(data);
+    },(error)=>{
+      console.log(error);
+    });
   }
 
 
