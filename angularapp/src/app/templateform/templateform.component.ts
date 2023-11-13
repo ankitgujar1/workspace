@@ -22,6 +22,7 @@ export class TemplateformComponent implements OnInit {
 
   onSubmit(contactDetails:NgForm) {
     console.log(contactDetails.value);
+    console.log(contactDetails.valid);
   }
 
 }
