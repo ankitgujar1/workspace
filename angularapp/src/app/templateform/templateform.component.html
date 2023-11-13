@@ -3,30 +3,30 @@
 <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
 
 
-    <div class="mb-3">
-        <label for="firstname">First Name</label>
+    <div class="form-group">
+        <label for="firstname">First Name</label><br>
         <input type="text" name="firstname" ngModel required>
-        
+
     </div>
 
-    <div class="mb-3">
-        <label for="lastname">Last Name</label>
+    <div class="form-group">
+        <label for="lastname">Last Name</label> <br>
         <input type="text" name="lastname" ngModel>
     </div>
 
-    <div class="mb-3">
-        <label for="email">Email </label>
+    <div class="form-group">
+        <label for="email">Email </label><br>
         <input type="text" id="email" name="email" ngModel>
     </div>
 
-    <div class="mb-3">
+    <div class="form-group">
         <label for="gender">Geneder</label>
         <input type="radio" value="male" name="gender" ngModel> Male
         <input type="radio" value="female" name="gender" ngModel> Female
     </div>
 
-    <div class="mb-3">
-        <label for="isMarried">Married</label>
+    <div class="form-group">
+        <label for="isMarried">Married</label><br>
         <input type="checkbox" name="isMarried" ngModel>
     </div>
 
@@ -38,8 +38,8 @@
         </option>
     </select>
 
-    <p>
+    <div class="form-group">
         <button class="btn btn-primary" type="submit">Submit</button>
-    </p>
+    </div>
 
 </form>
