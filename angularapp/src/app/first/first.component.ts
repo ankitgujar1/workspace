@@ -11,14 +11,14 @@ export class FirstComponent implements OnInit {
 
   ngOnInit() {
   }
-  arr:string[]=["ankit","mustafa"];
+  arr: string[] = ["ankit", "mustafa"];
 
-  names:object[]=[
-    {fname:"raghav",lname:"singh",age:2},
-    {fname:"raghav",lname:"singh",age:2},
-    {fname:"raghav",lname:"singh",age:2},
-    {fname:"raghav",lname:"singh",age:2},
-]
+  names: object[] = [
+    { fname: "raghav", lname: "singh", age: 2 },
+    { fname: "raghav", lname: "singh", age: 2 },
+    { fname: "raghav", lname: "singh", age: 2 },
+    { fname: "raghav", lname: "singh", age: 2 },
+  ]
 
   // employees:object[]=
   // colorStyle:string="color:green"
@@ -28,34 +28,34 @@ export class FirstComponent implements OnInit {
   // }
 
 
-  nme:string="deepa";
-     values:string =' ';
+  nme: string = "deepa";
+  values: string = ' ';
 
-     isValid:boolean = true;
+  isValid: boolean = true;
 
-     onKey(event){
-      console.log(event.target.value);
-      this.values = event.target.value;
-     }
-     
-     days:string[] =["Mon","Tue","Wed","Thu","Fri","Sat","Sun"] 
-     dropValue:string= "";
+  onKey(event) {
+    console.log(event.target.value);
+    this.values = event.target.value;
+  }
 
-     SetDropValue(event){
-      this.dropValue = event.target.value;
-     }
-     students:object[] = [
-      {name:'Deepak',gender:'male'},
-      {name:'Deepa',gender:'female'},
-      {name:'Ashok',gender:'male'},
-      {name:'Anshu',gender:'female'},
-   
-      ]
+  days: string[] = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
+  dropValue: string = "";
 
-     save(event:any){
-      console.log(event);
-       this.values = event.target.value;
-     }
+  SetDropValue(event) {
+    this.dropValue = event.target.value;
+  }
+  students: object[] = [
+    { name: 'Deepak', gender: 'male' },
+    { name: 'Deepa', gender: 'female' },
+    { name: 'Ashok', gender: 'male' },
+    { name: 'Anshu', gender: 'female' },
+
+  ]
+
+  save(event: any) {
+    console.log(event);
+    this.values = event.target.value;
+  }
 
 
 
