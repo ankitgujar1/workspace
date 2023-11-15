@@ -15,8 +15,6 @@ import { CrudComponent } from './crud/crud.component';
 import { TdsPipe } from './pipe/tds.pipe';
 import { TemplateformComponent } from './templateform/templateform.component';
 import { HttpComponent } from './http/http.component';
-import { SorryComponent } from './sorry/sorry.component';
-import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -30,15 +28,12 @@ import { HomeComponent } from './home/home.component';
     TdsPipe,
     TemplateformComponent,
     HttpComponent,
-    SorryComponent,
-    HomeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    HomeComponent
   ],
   providers: [HttpClientModule],
   bootstrap: [AppComponent]
