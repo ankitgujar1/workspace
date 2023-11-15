@@ -4,11 +4,13 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { FormComponent } from './form/form.component';
 import { FirstComponent } from './first/first.component';
+import { HomeComponent } from './home/home.component';
 
 
 const routes: Routes = [
   {path:'',component:FirstComponent},
-  {path:'form',component:FormComponent}
+  {path:'form',component:FormComponent},
+  {path:'home',component:HomeComponent}
 ];
 
 @NgModule({
