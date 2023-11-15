@@ -16,6 +16,7 @@ const routes: Routes = [
   {path:'pipe',component:CrudComponent},
   {path:'http',component:HttpComponent},
   {path:'first',component:FirstComponent}
+  // {path:'**',component:SorryComponent}
 ];
 
 @NgModule({
