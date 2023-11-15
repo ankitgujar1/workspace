@@ -16,11 +16,12 @@ import { TdsPipe } from './pipe/tds.pipe';
 import { TemplateformComponent } from './templateform/templateform.component';
 import { HttpComponent } from './http/http.component';
 import { HomeComponent } from './home/home.component';
-import{ServicesService} from './services.service';
+import { ServicesService } from './services.service';
 // import{Services}
 
 @NgModule({
-  declarations: [
+
+  declarations: [ // contains component
     AppComponent,
     FirstComponent,
     NavbarComponent,
@@ -33,13 +34,13 @@ import{ServicesService} from './services.service';
     HttpComponent,
     HomeComponent,
   ],
-  imports: [
+  imports: [ //contains Module
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule
   ],
-  providers: [HttpClientModule,ServicesService],
-  bootstrap: [AppComponent]
+  providers: [HttpClientModule,ServicesService], //
+  bootstrap: [AppComponent] //
 })
 export class AppModule { }
