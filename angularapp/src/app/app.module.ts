@@ -15,6 +15,8 @@ import { CrudComponent } from './crud/crud.component';
 import { TdsPipe } from './pipe/tds.pipe';
 import { TemplateformComponent } from './templateform/templateform.component';
 import { HttpComponent } from './http/http.component';
+import { SorryComponent } from './sorry/sorry.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { HttpComponent } from './http/http.component';
     // PiPipe,
     TdsPipe,
     TemplateformComponent,
-    HttpComponent
+    HttpComponent,
+    SorryComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
