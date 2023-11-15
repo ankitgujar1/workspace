@@ -9,7 +9,7 @@ import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
   {path:'',component:FirstComponent},
-  {path:'form',component:FormComponent},
+  {path:'form/:id',component:FormComponent},
   {path:'home',component:HomeComponent}
 ];
 
