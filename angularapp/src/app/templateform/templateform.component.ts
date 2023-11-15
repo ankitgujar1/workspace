@@ -7,14 +7,12 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './templateform.component.html',
   styleUrls: ['./templateform.component.css']
 })
-export class TemplateformComponent implements OnInit {
+export class TemplateformComponent {
 
   constructor(private activatedRoute:ActivatedRoute) {
     console.log(activatedRoute.snapshot.paramMap.get('id'));
    }
   
-  ngOnInit() {
-  }
 
   countryList:country[] = [
     new country("1", "India"),
