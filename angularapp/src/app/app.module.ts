@@ -16,6 +16,8 @@ import { TdsPipe } from './pipe/tds.pipe';
 import { TemplateformComponent } from './templateform/templateform.component';
 import { HttpComponent } from './http/http.component';
 import { HomeComponent } from './home/home.component';
+import{ServicesService} from './services.service';
+// import{Services}
 
 @NgModule({
   declarations: [
@@ -35,9 +37,9 @@ import { HomeComponent } from './home/home.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule,
+    HttpClientModule
   ],
-  providers: [HttpClientModule],
+  providers: [HttpClientModule,ServicesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
