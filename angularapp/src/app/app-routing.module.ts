@@ -7,11 +7,12 @@ import { FirstComponent } from './first/first.component';
 import { HomeComponent } from './home/home.component';
 import { CrudComponent } from './crud/crud.component';
 import { HttpComponent } from './http/http.component';
+import { GuardGuard } from './guard.guard';
 
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
-  {path:'form/:id',component:TemplateformComponent,canActivate:[G]},
+  {path:'form/:id',component:TemplateformComponent,canActivate:[GuardGuard]},
   {path:'home',component:HomeComponent},
   {path:'pipe',component:CrudComponent},
   {path:'http',component:HttpComponent},
