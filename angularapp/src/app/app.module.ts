@@ -18,6 +18,7 @@ import { HttpComponent } from './http/http.component';
 import { HomeComponent } from './home/home.component';
 import { ServicesService } from './services.service';
 import { GuardGuard } from './guard.guard';
+import { AuthorizationComponent } from './authorization/authorization.component';
 // import{Services}
 
 @NgModule({
@@ -34,6 +35,7 @@ import { GuardGuard } from './guard.guard';
     TemplateformComponent,
     HttpComponent,
     HomeComponent,
+    AuthorizationComponent
   ],
   imports: [ //contains Module
     BrowserModule,
