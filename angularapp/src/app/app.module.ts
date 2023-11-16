@@ -21,7 +21,8 @@ import { GuardGuard } from './guard.guard';
 import { TokendemoComponent } from './tokendemo/tokendemo.component';
 import { LifeComponent } from './life/life.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
-import { WpracComponent } from './wprac/wprac.component';
+// import { WpracComponent } from './wprac/wprac.component';
+// import { SorryComponent } from './sorry/sorry.component';
 // import { AuthorizationComponent } from './authorization/authorization.component';
 // import{Services}
 
@@ -42,7 +43,8 @@ import { WpracComponent } from './wprac/wprac.component';
     TokendemoComponent,
     LifeComponent,
     ReactiveFormComponent,
-    WpracComponent
+    // WpracComponent,
+    // SorryComponent
     // AuthorizationComponent
   ],
   imports: [ //contains Module

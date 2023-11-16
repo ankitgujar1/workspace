@@ -9,7 +9,8 @@ import { CrudComponent } from './crud/crud.component';
 import { HttpComponent } from './http/http.component';
 import { GuardGuard } from './guard.guard';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
-import { TokendemoComponent } from './tokendemo/tokendemo.component';
+// import { TokendemoComponent } from './tokendemo/tokendemo.component';
+// import { SorryComponent } from './sorry/sorry.component';
 
 
 const routes: Routes = [
@@ -20,7 +21,8 @@ const routes: Routes = [
   {path:'http',component:HttpComponent},
   {path:'first',component:FirstComponent},
   {path:'rform',component:ReactiveFormComponent}
-  // {path:'**',component:SorryComponent}
+  // {path:"token",component:TokendemoComponent},
+  // {path:'https',component:SorryComponent}
 ];
 
 @NgModule({
