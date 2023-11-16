@@ -9,6 +9,7 @@ import { CrudComponent } from './crud/crud.component';
 import { HttpComponent } from './http/http.component';
 import { GuardGuard } from './guard.guard';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
+import { TokendemoComponent } from './tokendemo/tokendemo.component';
 
 
 const routes: Routes = [
