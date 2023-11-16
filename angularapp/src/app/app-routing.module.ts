@@ -8,6 +8,7 @@ import { HomeComponent } from './home/home.component';
 import { CrudComponent } from './crud/crud.component';
 import { HttpComponent } from './http/http.component';
 import { GuardGuard } from './guard.guard';
+import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 
 
 const routes: Routes = [
@@ -16,7 +17,8 @@ const routes: Routes = [
   {path:'home',component:HomeComponent},
   {path:'pipe',component:CrudComponent},
   {path:'http',component:HttpComponent},
-  {path:'first',component:FirstComponent}
+  {path:'first',component:FirstComponent},
+  {path:'rform',component:ReactiveFormComponent}
   // {path:'**',component:SorryComponent}
 ];
 

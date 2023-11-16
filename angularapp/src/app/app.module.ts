@@ -6,7 +6,7 @@ import { HttpClientModule } from '@angular/common/http'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FirstComponent } from './first/first.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { FormComponent } from './form/form.component';
@@ -18,7 +18,11 @@ import { HttpComponent } from './http/http.component';
 import { HomeComponent } from './home/home.component';
 import { ServicesService } from './services.service';
 import { GuardGuard } from './guard.guard';
-import { AuthorizationComponent } from './authorization/authorization.component';
+import { TokendemoComponent } from './tokendemo/tokendemo.component';
+import { LifeComponent } from './life/life.component';
+import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
+import { WpracComponent } from './wprac/wprac.component';
+// import { AuthorizationComponent } from './authorization/authorization.component';
 // import{Services}
 
 @NgModule({
@@ -35,13 +39,18 @@ import { AuthorizationComponent } from './authorization/authorization.component'
     TemplateformComponent,
     HttpComponent,
     HomeComponent,
-    AuthorizationComponent
+    TokendemoComponent,
+    LifeComponent,
+    ReactiveFormComponent,
+    WpracComponent
+    // AuthorizationComponent
   ],
   imports: [ //contains Module
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [HttpClientModule,ServicesService,GuardGuard], //
   bootstrap: [AppComponent] //

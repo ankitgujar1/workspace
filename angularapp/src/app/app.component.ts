@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   
   title = 'Ankit';
-  n="Hello World"
+  n:string="Hello World";
   n1:number=10;
   n2:number=10;
   n3:number=this.n1+this.n2;
