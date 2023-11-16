@@ -17,6 +17,7 @@ import { TemplateformComponent } from './templateform/templateform.component';
 import { HttpComponent } from './http/http.component';
 import { HomeComponent } from './home/home.component';
 import { ServicesService } from './services.service';
+import { GuardGuard } from './guard.guard';
 // import{Services}
 
 @NgModule({
@@ -40,7 +41,7 @@ import { ServicesService } from './services.service';
     FormsModule,
     HttpClientModule
   ],
-  providers: [HttpClientModule,ServicesService], //
+  providers: [HttpClientModule,ServicesService,GuardGuard], //
   bootstrap: [AppComponent] //
 })
 export class AppModule { }

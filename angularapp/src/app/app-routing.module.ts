@@ -11,7 +11,7 @@ import { HttpComponent } from './http/http.component';
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
-  {path:'form/:id',component:TemplateformComponent},
+  {path:'form/:id',component:TemplateformComponent,canActivate:[G]},
   {path:'home',component:HomeComponent},
   {path:'pipe',component:CrudComponent},
   {path:'http',component:HttpComponent},
