@@ -11,7 +11,7 @@ import { GuardGuard } from './guard.guard';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 // import { TokendemoComponent } from './tokendemo/tokendemo.component';
 // import { SorryComponent } from './sorry/sorry.component';
-
+import { CrudOperationsComponent } from './crud-operations/crud-operations.component';
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
@@ -20,7 +20,8 @@ const routes: Routes = [
   {path:'pipe',component:CrudComponent},
   {path:'http',component:HttpComponent},
   {path:'first',component:FirstComponent},
-  {path:'rform',component:ReactiveFormComponent}
+  {path:'rform',component:ReactiveFormComponent},
+  {path:'cform',component:CrudOperationsComponent}
   // {path:"token",component:TokendemoComponent},
   // {path:'https',component:SorryComponent}
 ];

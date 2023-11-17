@@ -14,14 +14,9 @@ export class CrudOperationsComponent implements OnInit {
   ngOnInit() {
   }
 
-  name:string;
-  salary:number;
-  joinDate:string;
 
   onSubmit(contactForm:NgForm){
-    this.name=contactForm.value.name;
-    this.name=contactForm.value.salary;
-    this.joinDate=contactForm.value.joinDate
+    this.http.SaveData(contactForm.value);
   }
 
 
