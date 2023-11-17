@@ -30,11 +30,19 @@ export class BackendService {
   }
 
   UpdateData(id:number,data:any){ //put
-    // let responseData:any="";
-    // let httpHeaders:HttpHeaders=new HttpHeaders({
-    //   Accept:"application/json"
-    // })
-    // this.http.put("",data,{})
+    let responseData:any="";
+    let httpHeaders:HttpHeaders=new HttpHeaders({
+      Accept:"application/json"
+    })
+    this.http.put("https://8081-abbcbfeabdfabcaaaceeafebeccaddbefddaf.premiumproject.examly.io/api/Employee/"+id,data,{headers:httpHeaders})
+    .subscribe(res=>{
+      responseData=res;
+
+    },
+    error=>{
+      responseData=error;
+    })
+    return responseData;
   }
 
   DeleteData(id:number){ //delete
