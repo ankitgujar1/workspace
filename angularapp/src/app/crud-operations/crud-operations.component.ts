@@ -11,7 +11,7 @@ import { IEmployee } from '../backend.service'
 export class CrudOperationsComponent implements OnInit {
   listData: IEmployee[] = []
 
-  listDataById:any;
+  listDataById: IEmployee[] = []
 
   constructor(private http: BackendService) {
     http.GetData().subscribe(success => {
@@ -44,8 +44,9 @@ export class CrudOperationsComponent implements OnInit {
     // console.log(this.listDataById)
 
     this.http.GetDataById(getByIdForm.value.id).subscribe(success => {
-      this.listData = success;
+      this.listDataById = success;
     })
+    console.log(this.listDataById)
   }
 
   

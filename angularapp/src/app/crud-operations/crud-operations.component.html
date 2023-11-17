@@ -109,8 +109,6 @@
 
 </form>
 
-<br>
-<h1>GetById</h1>
 
 <table class="table table-striped">
     <tr>
@@ -119,11 +117,11 @@
         <th>Salary</th>
         <th>JoinDate</th>
     </tr>
-    <tr *ngFor="let i of listDataById">
-        <td>{{i.id}}</td>
-        <td>{{i.name}}</td>
-        <td>{{i.salary}}</td>
-        <td>{{i.joinDate}}</td>
+    <tr>
+        <td>{{listDataById.id}}</td>
+        <td>{{listDataById.name}}</td>
+        <td>{{listDataById.salary}}</td>
+        <td>{{listDataById.joinDate}}</td>
     </tr>
 </table>
 
