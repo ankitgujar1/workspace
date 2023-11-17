@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
+import { BackendService } from '../backend.service';
 
 @Component({
   selector: 'app-crud-operations',
@@ -7,11 +9,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CrudOperationsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private http:BackendService) { }
 
   ngOnInit() {
   }
 
-  
+  name:string;
+  salary:number;
+  joinDate:string;
+
+  onSubmit(contactForm:NgForm){
+    this.name=contactForm.value.name;
+    this.name=contactForm.value.salary;
+    this.joinDate=contactForm.value.joinDate
+  }
+
+
+
+
 
 }
