@@ -46,7 +46,19 @@ export class BackendService {
   }
 
   DeleteData(id:number){ //delete
-    
+    let responseData:any="";
+    let httpHeaders:HttpHeaders=new HttpHeaders({
+      Accept:"application/json"
+    })
+    this.http.delete("https://8081-abbcbfeabdfabcaaaceeafebeccaddbefddaf.premiumproject.examly.io/api/Employee/"+id,{headers:httpHeaders})
+    .subscribe(res=>{
+      responseData=res;
+
+    },
+    error=>{
+      responseData=error;
+    })
+    return responseData;
   }
 
   GetData(){ //retrive all

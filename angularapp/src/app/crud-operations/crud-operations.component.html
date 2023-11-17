@@ -59,6 +59,22 @@
 
 </form>
 
+<br>
+<h1>Delete</h1>
+
+<form #deleteForm="ngForm" (ngSubmit)="onSubmitDelete(deleteForm)">
+
+    <div class="form-group">
+        <label for="id">Id</label><br>
+        <input type="number" name="id" ngModel>
+    </div>
+
+    <div class="form-group">
+        <button class="btn btn-primary my-3" type="submit">Submit</button>
+    </div>
+
+</form>
+
 
 
 

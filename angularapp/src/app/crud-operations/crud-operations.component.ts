@@ -16,14 +16,17 @@ export class CrudOperationsComponent implements OnInit {
 
 
   onSubmitPost(postForm:NgForm){
-    console.log(postForm.value)
+    
     this.http.SaveData(postForm.value);
   }
 
   onSubmitPut(putForm:NgForm){
+    // console.log(putForm.value)
     this.http.UpdateData(putForm.value.id,putForm.value);
   }
 
-
+  onSubmitDelete(deleteForm:NgForm){
+    this.http.DeleteData(deleteForm.value.id);
+  }
 
 }
