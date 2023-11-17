@@ -2,7 +2,9 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpHeaders } from '@angular/common/http';
+import { Observable } from 'rxjs';
 // import { error } from 'console';
+
 
 
 @Injectable({
@@ -61,8 +63,14 @@ export class BackendService {
     return responseData;
   }
 
-  GetData(){ //retrive all  https://8081-abbcbfeabdfabcaaaceeafebeccaddbefddaf.premiumproject.examly.io/api/Employee
-    
+  
+  GetData() : Observable<IEmployee[]>{
+    let responceData:any="";
+    let httpHeaders:HttpHeaders = new HttpHeaders({
+      Accept:'application/json'
+    })
+     return this.http.get<IEmployee[]>("https://8081-abbcbfeabdfabcaaaceeafebeccaddbefddaf.premiumproject.examly.io/api/Employee",{headers:httpHeaders})
+   
   }
 
   GetDataById(id:number){ //retrive by id
@@ -70,9 +78,9 @@ export class BackendService {
   }
 }
 
-interface IEmployee{
+export interface IEmployee{
   id:number;
   name:string;
   salary:number;
-  joinDate:Date
+  joinDate:string;
 }

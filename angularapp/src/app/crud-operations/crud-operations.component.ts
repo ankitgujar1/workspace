@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { BackendService } from '../backend.service';
+import{IEmployee} from '../backend.service'
 
 @Component({
   selector: 'app-crud-operations',
@@ -8,8 +9,12 @@ import { BackendService } from '../backend.service';
   styleUrls: ['./crud-operations.component.css']
 })
 export class CrudOperationsComponent implements OnInit {
-
-  constructor(private http:BackendService) { }
+  listData:IEmployee[]=[]
+  constructor(private http:BackendService) {
+    http.GetData().subscribe(success=>{
+      this.listData = success;
+  })
+  }
 
   ngOnInit() {
   }

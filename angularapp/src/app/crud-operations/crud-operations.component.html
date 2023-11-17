@@ -78,8 +78,14 @@
 <br>
 <h1>Get</h1>
 
-<table>
-    <tr *ngForm="let i of list">
+<table class="table table-striped">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Salary</th>
+        <th>JoinDate</th>
+    </tr>
+    <tr *ngFor="let i of listData">
         <td>{{i.id}}</td>
         <td>{{i.name}}</td>
         <td>{{i.salary}}</td>
