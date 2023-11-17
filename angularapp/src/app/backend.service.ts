@@ -61,7 +61,7 @@ export class BackendService {
     return responseData;
   }
 
-  GetData(){ //retrive all
+  GetData(){ //retrive all  https://8081-abbcbfeabdfabcaaaceeafebeccaddbefddaf.premiumproject.examly.io/api/Employee
     
   }
 

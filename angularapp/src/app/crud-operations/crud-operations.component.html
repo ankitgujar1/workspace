@@ -75,6 +75,18 @@
 
 </form>
 
+<br>
+<h1>Get</h1>
+
+<table>
+    <tr *ngForm="let i of list">
+        <td>{{i.id}}</td>
+        <td>{{i.name}}</td>
+        <td>{{i.salary}}</td>
+        <td>{{i.joinDate}}</td>
+    </tr>
+</table>
+
 
 
 
