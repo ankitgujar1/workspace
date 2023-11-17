@@ -93,19 +93,37 @@
     </tr>
 </table>
 
+<br>
+<h1>GetById</h1>
 
+<form #getByIdForm="ngForm" (ngSubmit)="onSubmitgetById(getByIdForm)">
 
+    <div class="form-group">
+        <label for="id">Id</label><br>
+        <input type="number" name="id" ngModel>
+    </div>
 
+    <div class="form-group">
+        <button class="btn btn-primary my-3" type="submit">Submit</button>
+    </div>
 
+</form>
 
+<br>
+<h1>GetById</h1>
 
-
-
-
-
-
-
-
-
-
+<table class="table table-striped">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Salary</th>
+        <th>JoinDate</th>
+    </tr>
+    <tr *ngFor="let i of listDataById">
+        <td>{{i.id}}</td>
+        <td>{{i.name}}</td>
+        <td>{{i.salary}}</td>
+        <td>{{i.joinDate}}</td>
+    </tr>
+</table>
 
