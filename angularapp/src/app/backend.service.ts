@@ -81,7 +81,7 @@ export class BackendService {
     this.http.get("https://8081-abbcbfeabdfabcaaaceeafebeccaddbefddaf.premiumproject.examly.io/api/Employee/" + id, { headers: httpHeaders })
       .subscribe(res => {
         responseData = res;
-
+        // console.log(responseData);
       },
         error => {
           responseData = error;
