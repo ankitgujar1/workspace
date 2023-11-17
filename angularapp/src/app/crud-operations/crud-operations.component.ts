@@ -16,6 +16,7 @@ export class CrudOperationsComponent implements OnInit {
 
 
   onSubmit(contactForm:NgForm){
+    console.log(contactForm.value)
     this.http.SaveData(contactForm.value);
   }
 

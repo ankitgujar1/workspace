@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http'
-
+import { HttpClient } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -56,6 +56,7 @@ import { CrudOperationsComponent } from './crud-operations/crud-operations.compo
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
+    // HttpClient,
     ReactiveFormsModule
   ],
   providers: [HttpClientModule,ServicesService,GuardGuard,BackendService], // contains services
