@@ -18,10 +18,10 @@ export class BackendService {
       Accept:"application/json"
     })
 
-    this.http.post("",data,{headers:httpHeaders})
+    this.http.post("https://8080-abbcbfeabdfabcaaaceeafebeccaddbefddaf.premiumproject.examly.io/api/Employee",data,{headers:httpHeaders})
     .subscribe(res=>{
       responseData=res;
-      
+
     },
     error=>{
       responseData=error;
@@ -30,11 +30,11 @@ export class BackendService {
   }
 
   UpdateData(id:number,data:any){ //put
-    let responseData:any="";
-    let httpHeaders:HttpHeaders=new HttpHeaders({
-      Accept:"application/json"
-    })
-    this.http.put("",data,{})
+    // let responseData:any="";
+    // let httpHeaders:HttpHeaders=new HttpHeaders({
+    //   Accept:"application/json"
+    // })
+    // this.http.put("",data,{})
   }
 
   DeleteData(id:number){ //delete

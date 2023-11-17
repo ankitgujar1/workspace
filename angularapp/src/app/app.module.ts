@@ -26,6 +26,7 @@ import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 // import { AuthorizationComponent } from './authorization/authorization.component';
 // import{Services}
 import { BackendService } from './backend.service';
+import { CrudOperationsComponent } from './crud-operations/crud-operations.component';
 // import { BackendService } from './backend.service';
 
 @NgModule({
@@ -45,6 +46,7 @@ import { BackendService } from './backend.service';
     TokendemoComponent,
     LifeComponent,
     ReactiveFormComponent,
+    CrudOperationsComponent,
     // WpracComponent,
     // SorryComponent
     // AuthorizationComponent
