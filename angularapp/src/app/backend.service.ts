@@ -69,3 +69,10 @@ export class BackendService {
     
   }
 }
+
+interface IEmployee{
+  id:number;
+  name:string;
+  salary:number;
+  joinDate:Date
+}
