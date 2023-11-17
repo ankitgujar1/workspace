@@ -25,6 +25,8 @@ import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 // import { SorryComponent } from './sorry/sorry.component';
 // import { AuthorizationComponent } from './authorization/authorization.component';
 // import{Services}
+import { BackendService } from './backend.service';
+// import { BackendService } from './backend.service';
 
 @NgModule({
 
@@ -54,7 +56,7 @@ import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
     HttpClientModule,
     ReactiveFormsModule
   ],
-  providers: [HttpClientModule,ServicesService,GuardGuard], //
+  providers: [HttpClientModule,ServicesService,GuardGuard,BackendService], // contains services
   bootstrap: [AppComponent] //
 })
 export class AppModule { }

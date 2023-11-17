@@ -21,6 +21,7 @@ export class BackendService {
     this.http.post("",data,{headers:httpHeaders})
     .subscribe(res=>{
       responseData=res;
+      
     },
     error=>{
       responseData=error;
@@ -29,7 +30,11 @@ export class BackendService {
   }
 
   UpdateData(id:number,data:any){ //put
-    
+    let responseData:any="";
+    let httpHeaders:HttpHeaders=new HttpHeaders({
+      Accept:"application/json"
+    })
+    this.http.put("",data,{})
   }
 
   DeleteData(id:number){ //delete
