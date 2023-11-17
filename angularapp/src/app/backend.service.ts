@@ -74,19 +74,11 @@ export class BackendService {
   }
 
   GetDataById(id: number) { //retrive by id https://8081-abbcbfeabdfabcaaaceeafebeccaddbefddaf.premiumproject.examly.io/api/Employee/8
-    let responseData: any = "";
+    let responceData: any = "";
     let httpHeaders: HttpHeaders = new HttpHeaders({
       Accept: 'application/json'
     })
-    this.http.get("https://8081-abbcbfeabdfabcaaaceeafebeccaddbefddaf.premiumproject.examly.io/api/Employee/" + id, { headers: httpHeaders })
-      .subscribe(res => {
-        responseData = res;
-        // console.log(responseData);
-      },
-        error => {
-          responseData = error;
-        })
-    return responseData;
+    return this.http.get<IEmployee[]>("https://8081-abbcbfeabdfabcaaaceeafebeccaddbefddaf.premiumproject.examly.io/api/Employee/"+id, { headers: httpHeaders });
   }
 }
 

@@ -11,12 +11,13 @@ import { IEmployee } from '../backend.service'
 export class CrudOperationsComponent implements OnInit {
   listData: IEmployee[] = []
 
-  listDataById:any="";
+  listDataById:any;
 
   constructor(private http: BackendService) {
     http.GetData().subscribe(success => {
       this.listData = success;
     })
+
   }
 
   ngOnInit() {
@@ -39,8 +40,14 @@ export class CrudOperationsComponent implements OnInit {
 
   onSubmitgetById(getByIdForm:NgForm){
     // console
-    this.listDataById= this.http.GetDataById(getByIdForm.value.id);
-    console.log(this.listDataById)
+    // this.http.GetDataById(getByIdForm.value.id);
+    // console.log(this.listDataById)
+
+    this.http.GetDataById(getByIdForm.value.id).subscribe(success => {
+      this.listData = success;
+    })
   }
+
+  
 
 }
