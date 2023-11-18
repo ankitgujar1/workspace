@@ -14,9 +14,7 @@ export class CrudOperationsComponent implements OnInit {
   listDataById: IEmployee[] = []
 
   constructor(private http: BackendService) {
-    http.GetData().subscribe(success => {
-      this.listData = success;
-    })
+    
 
   }
 
@@ -38,7 +36,13 @@ export class CrudOperationsComponent implements OnInit {
     this.http.DeleteData(deleteForm.value.id);
   }
 
-  onSubmitgetById(getByIdForm:NgForm){
+  onSubmitGet(){
+    this.http.GetData().subscribe(success => {
+      this.listData = success;
+    })
+  }
+
+  onSubmitGetById(getByIdForm:NgForm){
     // console
     // this.http.GetDataById(getByIdForm.value.id);
     // console.log(this.listDataById)

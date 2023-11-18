@@ -78,6 +78,10 @@
 <br>
 <h1>Get</h1>
 
+<div class="form-group">
+        <button class="btn btn-primary my-3" type="submit" (click)="onSubmitGet()">Submit</button>
+    </div>
+
 <table class="table table-striped">
     <tr>
         <th>ID</th>
@@ -96,7 +100,7 @@
 <br>
 <h1>GetById</h1>
 
-<form #getByIdForm="ngForm" (ngSubmit)="onSubmitgetById(getByIdForm)">
+<form #getByIdForm="ngForm" (ngSubmit)="onSubmitGetById(getByIdForm)">
 
     <div class="form-group">
         <label for="id">Id</label><br>
