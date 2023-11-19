@@ -13,6 +13,7 @@ import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 // import { SorryComponent } from './sorry/sorry.component';
 import { CrudOperationsComponent } from './crud-operations/crud-operations.component';
 import { ReadComponent } from './operation/read/read.component';
+import { ReadByIdComponent } from './operation/read-by-id/read-by-id.component';
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
@@ -23,7 +24,8 @@ const routes: Routes = [
   {path:'first',component:FirstComponent},
   {path:'rform',component:ReactiveFormComponent},
   {path:'cform',component:CrudOperationsComponent},
-  {path:'read',component:ReadComponent}
+  {path:'read',component:ReadComponent},
+  {path:'read/:id',component:ReadByIdComponent}
   // {path:"token",component:TokendemoComponent},
   // {path:'https',component:SorryComponent}
 ];

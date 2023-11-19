@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CrudService, IEmp } from '../crud.service';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-read',
@@ -19,5 +20,9 @@ export class ReadComponent implements OnInit {
 
   ngOnInit() {
   }
+
+  // Search(byId:NgForm){
+
+  // }
 
 }

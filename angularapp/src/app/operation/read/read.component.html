@@ -1,37 +1,39 @@
-<div class="container"></div>
-<form #byId="ngForm" (ngSubmit)="Search(byId)">
-    <div class="form-group">
-        <label for="id">Enter Employee ID</label>
-        <input type="number" name="id" #eId="ngModel" required ngModel>
-        <div *ngIf="eId.invalid && eId.touched">
-            <p class="text-danger"> Firstname is required</p>
+<!-- <div class="container">
+    <form #byId="ngForm" (ngSubmit)="Search(byId)">
+        <div class="form-group">
+            <label class="my-2" for="id">Enter Employee ID</label><br>
+            <input type="number" name="id" #eId="ngModel" required ngModel>
+            <div *ngIf="eId.invalid && eId.touched">
+                <p class="text-danger"> ID is required</p>
+            </div>
         </div>
-    </div>
 
-    <div class="form-group">
-        <button class="btn btn-primary my-3" [disabled]="byId.invalid" type="submit">Search</button>
-    </div>
-</form>
+        <div class="form-group">
+            <button class="btn btn-primary my-3" [disabled]="byId.invalid" type="submit">Search</button>
+        </div>
+    </form>
+</div>
+<hr> -->
+<div class="container">
+    <table class="table table-striped">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Salary</th>
+            <th>JoinDate</th>
+            <th>Action</th>
+        </tr>
+        <tr *ngFor="let i of list">
+            <td>{{i.id}}</td>
+            <td>{{i.name}}</td>
+            <td>{{i.salary}}</td>
+            <td>{{i.joinDate}}</td>
 
-<hr>
-
-<table class="table table-striped">
-    <tr>
-        <th>ID</th>
-        <th>Name</th>
-        <th>Salary</th>
-        <th>JoinDate</th>
-        <th>Action</th>
-    </tr>
-    <tr *ngFor="let i of list">
-        <td>{{i.id}}</td>
-        <td>{{i.name}}</td>
-        <td>{{i.salary}}</td>
-        <td>{{i.joinDate}}</td>
-
-        <td>
-            <a class="btn btn-primary mx-2 my-2">Edit</a>
-            <a class="btn btn-danger mx-2 my-2">Delete</a>
-        </td>
-    </tr>
-</table>
+            <td>
+                <a class="btn btn-primary mx-2 my-2">Edit</a>
+                <a class="btn btn-danger mx-2 my-2">Delete</a>
+                <a class="btn btn-success mx-2 my-2">Details</a>
+            </td>
+        </tr>
+    </table>
+</div>
