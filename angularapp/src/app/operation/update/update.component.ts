@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { CrudComponent } from 'src/app/crud/crud.component';
 
 @Component({
   selector: 'app-update',
@@ -7,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UpdateComponent implements OnInit {
 
-  constructor() { }
+  constructor(private http:CrudComponent,private ar:ActivatedRoute) { }
 
   ngOnInit() {
   }

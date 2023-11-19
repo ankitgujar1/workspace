@@ -30,10 +30,12 @@
             <td>{{i.joinDate}}</td>
 
             <td>
-                <a class="btn btn-primary mx-2 my-2">Edit</a>
-                <a class="btn btn-danger mx-2 my-2">Delete</a>
+                <a class="btn btn-primary mx-2 my-2" [routerLink]="['/update',i.id]">Edit</a>
+                <a class="btn btn-danger mx-2 my-2" [routerLink]="['/delete',i.id]">Delete</a>
                 <a class="btn btn-success mx-2 my-2" [routerLink]="['/read',i.id]">Details</a>
             </td>
         </tr>
     </table>
 </div>
+
+<button class="btn btn-primary mx-5 my-3" [routerLink]="['/create']">Add Employee</button>

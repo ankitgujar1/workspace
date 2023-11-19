@@ -1,4 +1,8 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
+import { CrudService } from '../crud.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-create',
@@ -7,9 +11,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreateComponent implements OnInit {
 
-  constructor() { }
+  constructor(private http:CrudService,private r:Router) { }
 
   ngOnInit() {
+  }
+
+  onSubmitPost(postForm:NgForm){
+    this.http.Create(postForm.value)
+    .subscribe(()=>{
+      this.r.navigate(['read']);
+    })
   }
 
 }
