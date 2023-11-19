@@ -1,1 +1,22 @@
-<p>read-by-id works!</p>
+<div class="container">
+    <table class="table table-striped">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Salary</th>
+            <th>JoinDate</th>
+            <th>Action</th>
+        </tr>
+        <tr>
+            <td>{{list.id}}</td>
+            <td>{{list.name}}</td>
+            <td>{{list.salary}}</td>
+            <td>{{list.joinDate}}</td>
+
+            <td>
+                <a class="btn btn-primary mx-2 my-2">Edit</a>
+                <a class="btn btn-danger mx-2 my-2">Delete</a>
+            </td>
+        </tr>
+    </table>
+</div>

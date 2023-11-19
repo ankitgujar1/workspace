@@ -14,6 +14,8 @@ import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { CrudOperationsComponent } from './crud-operations/crud-operations.component';
 import { ReadComponent } from './operation/read/read.component';
 import { ReadByIdComponent } from './operation/read-by-id/read-by-id.component';
+import { CreateComponent } from './operation/create/create.component';
+import { UpdateComponent } from './operation/update/update.component';
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
@@ -25,7 +27,10 @@ const routes: Routes = [
   {path:'rform',component:ReactiveFormComponent},
   {path:'cform',component:CrudOperationsComponent},
   {path:'read',component:ReadComponent},
-  {path:'read/:id',component:ReadByIdComponent}
+  {path:'read/:id',component:ReadByIdComponent},
+  {path:'create',component:CreateComponent},
+  {path:'update/:id',component:UpdateComponent},
+  {path:'delete/:id',co}
   // {path:"token",component:TokendemoComponent},
   // {path:'https',component:SorryComponent}
 ];
