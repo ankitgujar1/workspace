@@ -42,6 +42,7 @@ export class CrudOperationsComponent implements OnInit {
     })
   }
 
+
   onSubmitGetById(getByIdForm:NgForm){
     // console
     // this.http.GetDataById(getByIdForm.value.id);
@@ -51,6 +52,13 @@ export class CrudOperationsComponent implements OnInit {
       this.listDataById = success;
     })
     console.log(this.listDataById)
+  }
+
+
+
+
+  method_name(form_name:NgForm){
+    this.http.GetDataById(form_name.value.id)
   }
 
   

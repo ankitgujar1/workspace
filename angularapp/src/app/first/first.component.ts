@@ -27,6 +27,8 @@ export class FirstComponent implements OnInit {
   //   console.log(event.target.value);
   // }
 
+  str:string;
+
 
   nme: string = "deepa";
   values: string = ' ';

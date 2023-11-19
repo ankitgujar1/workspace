@@ -64,6 +64,22 @@ export class BackendService {
     return responseData;
   }
 
+  put(id:number,data:any){
+    let r:any="";
+    let h:HttpHeaders=new HttpHeaders({
+      Accept:"application/json"
+    })
+
+    this.http.put("url"+id,data,{headers:h})
+    .subscribe(res=>{
+      r=res;
+    },
+    e=>{
+      r=e;
+    })
+    return r;
+  }
+
   // update(id: number, data: any) {
   //   let r: any = "";
   //   let httpHeaders: HttpHeaders = new HttpHeaders({
@@ -153,7 +169,7 @@ export class BackendService {
 
 
 
-
+  
 
 
 
