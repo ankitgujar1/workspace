@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CrudService } from '../crud.service';
+import { CrudService, IEmp } from '../crud.service';
 
 @Component({
   selector: 'app-read',
@@ -8,8 +8,13 @@ import { CrudService } from '../crud.service';
 })
 export class ReadComponent implements OnInit {
 
+  list:IEmp[]=[]
+
   constructor(private http:CrudService) { 
     http.Read()
+    .subscribe(s=>{
+      this.list=s;
+    })
   }
 
   ngOnInit() {

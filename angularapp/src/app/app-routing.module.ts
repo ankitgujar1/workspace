@@ -12,6 +12,7 @@ import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 // import { TokendemoComponent } from './tokendemo/tokendemo.component';
 // import { SorryComponent } from './sorry/sorry.component';
 import { CrudOperationsComponent } from './crud-operations/crud-operations.component';
+import { ReadComponent } from './operation/read/read.component';
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
@@ -21,7 +22,8 @@ const routes: Routes = [
   {path:'http',component:HttpComponent},
   {path:'first',component:FirstComponent},
   {path:'rform',component:ReactiveFormComponent},
-  {path:'cform',component:CrudOperationsComponent}
+  {path:'cform',component:CrudOperationsComponent},
+  {path:'read',component:ReadComponent}
   // {path:"token",component:TokendemoComponent},
   // {path:'https',component:SorryComponent}
 ];
