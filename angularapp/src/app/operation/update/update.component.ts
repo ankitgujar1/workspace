@@ -28,8 +28,11 @@ export class UpdateComponent implements OnInit {
 
 
   onSubmitUpdate(updateForm:NgForm){
-    this.list=updateForm.value;
-    
+    // this.list=updateForm.value;
+    this.http.Update(updateForm.value.id,updateForm.value)
+    .subscribe(()=>{
+      this.r.navigate(['read']);
+    })
   }
 
 }

@@ -1,1 +1,27 @@
-<p>delete works!</p>
+<form #deleteForm="ngForm" (ngSubmit)="onSubmitDelete(deleteForm)">
+
+    <div class="form-group">
+        <label for="id">Id</label><br>
+        <input type="number" name="id" [(ngModel)]="list.id" ngModel readonly>
+    </div>
+
+    <div class="form-group">
+        <label for="name">Name</label><br>
+        <input type="text" name="name" #fname="ngModel" [(ngModel)]="list.name" ngModel readonly>
+    </div>
+    
+    <div class="form-group">
+        <label for="salary">Salary</label> <br>
+        <input type="number" name="salary" #lname="ngModel" [(ngModel)]="list.salary" ngModel readonly>
+    </div>
+
+    <div class="form-group">
+        <label for="joindate">JoinDate</label><br>
+        <input type="datetime-local" name="joinDate" [(ngModel)]="list.joinDate" ngModel readonly>
+    </div>
+
+    <div class="form-group">
+        <button class="btn btn-primary my-3" type="submit">Delete</button>
+    </div>
+
+</form>
