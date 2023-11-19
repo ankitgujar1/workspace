@@ -27,6 +27,11 @@ import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 // import{Services}
 import { BackendService } from './backend.service';
 import { CrudOperationsComponent } from './crud-operations/crud-operations.component';
+import { CreateComponent } from './operation/create/create.component';
+import { ReadComponent } from './operation/read/read.component';
+import { ReadByIdComponent } from './operation/read-by-id/read-by-id.component';
+import { UpdateComponent } from './operation/update/update.component';
+import { DeleteComponent } from './operation/delete/delete.component';
 // import { BackendService } from './backend.service';
 
 @NgModule({
@@ -47,6 +52,11 @@ import { CrudOperationsComponent } from './crud-operations/crud-operations.compo
     LifeComponent,
     ReactiveFormComponent,
     CrudOperationsComponent,
+    CreateComponent,
+    ReadComponent,
+    ReadByIdComponent,
+    UpdateComponent,
+    DeleteComponent,
     // WpracComponent,
     // SorryComponent
     // AuthorizationComponent
