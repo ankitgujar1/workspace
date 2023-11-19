@@ -46,7 +46,7 @@ export class CrudService {
       Accept:"application/json"
     })
 
-    return this.http.delete<IEmp>("https://8081-abbcbfeabdfabcaaaceeafebeccaddbefddaf.premiumproject.examly.io/api/Employee"+id,{headers:httpHeader});
+    return this.http.delete<IEmp>("https://8081-abbcbfeabdfabcaaaceeafebeccaddbefddaf.premiumproject.examly.io/api/Employee/"+id,{headers:httpHeader});
   }
 
 }
