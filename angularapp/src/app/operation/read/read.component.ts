@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CrudService } from '../crud.service';
 
 @Component({
   selector: 'app-read',
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ReadComponent implements OnInit {
 
-  constructor() { }
+  constructor(private http:CrudService) { 
+    http.Read()
+  }
 
   ngOnInit() {
   }
