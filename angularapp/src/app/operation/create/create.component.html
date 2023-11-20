@@ -6,21 +6,26 @@
         <input type="text" name="name" #eName="ngModel" required minlength="10" ngModel>
         <div *ngIf="eName.invalid && eName.touched">
             <p *ngIf="eName.errors.required" class="text-danger">Name is required</p>
+            <p *ngIf="eName.errors.minlength" class="text-danger">Minimum length should be 10</p>
         </div>
     </div>
     
     <div class="form-group">
         <label for="salary">Salary</label> <br>
-        <input type="number" name="salary" #eSalary="ngModel" ngModel>
+        <input type="number" name="salary" #eSalary="ngModel" ngModel required rang>
+        <div *ngIf="eSalary.invalid && eSalary.touched">
+            <p *ngIf="eSalary.errors.required" class="text-danger">Salary is required</p>
+            <p *ngIf="eSalary.value>10000" class="text-danger">Salary should be greater than 10000</p>
+        </div>
     </div>
 
     <div class="form-group">
         <label for="joindate">JoinDate</label><br>
-        <input type="datetime-local" name="joinDate" #eJoinDate="ngModel" ngModel>
+        <input type="datetime-local" name="joinDate" #eJoinDate="ngModel" ngModel required>
     </div>
 
     <div class="form-group">
-        <button class="btn btn-primary my-3" type="submit">Submit</button>
+        <button class="btn btn-primary my-3" type="submit" [disabled]="!postForm.valid">Submit</button>
     </div>
 
 </form>
