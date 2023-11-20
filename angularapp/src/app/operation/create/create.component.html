@@ -12,10 +12,10 @@
     
     <div class="form-group">
         <label for="salary">Salary</label> <br>
-        <input type="number" name="salary" #eSalary="ngModel" ngModel required rang>
+        <input type="number" name="salary" #eSalary="ngModel" ngModel required minlength="4">
         <div *ngIf="eSalary.invalid && eSalary.touched">
             <p *ngIf="eSalary.errors.required" class="text-danger">Salary is required</p>
-            <p *ngIf="eSalary.value>10000" class="text-danger">Salary should be greater than 10000</p>
+            <p *ngIf="eSalary.errors.minlength" class="text-danger">Salary should be greater than 10000</p>
         </div>
     </div>
 
