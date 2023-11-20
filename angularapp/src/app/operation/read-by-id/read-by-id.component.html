@@ -2,17 +2,23 @@
     <table class="table table-striped">
         <tr>
             <th>ID</th>
-            <th>Name</th>
-            <th>Salary</th>
-            <th>JoinDate</th>
-            <th>Action</th>
+            <td>{{list.id}}</td>
         </tr>
         <tr>
-            <td>{{list.id}}</td>
+            <th>Name</th>
             <td>{{list.name}}</td>
+        </tr>
+        <tr>
+            <th>Salary</th>
             <td>{{list.salary}}</td>
+        </tr>
+        <tr>
+            <th>JoinDate</th>
             <td>{{list.joinDate}}</td>
-
+        </tr>
+            
+        <!-- </tr> -->
+        <tr>
             <td>
                 <a class="btn btn-primary mx-2 my-2" [routerLink]="['/update',list.id]">Edit</a>
                 <a class="btn btn-danger mx-2 my-2" [routerLink]="['/delete',list.id]">Delete</a>
