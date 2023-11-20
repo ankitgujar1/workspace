@@ -7,21 +7,26 @@
 
     <div class="form-group">
         <label for="name">Name</label><br>
-        <input type="text" name="name" #fname="ngModel" [(ngModel)]="list.name" ngModel>
+        <input type="text" name="name" #eName="ngModel" [(ngModel)]="list.name" required minlength="10" ngModel>
+        <!-- <input type="text" name="name" #eName="ngModel" required minlength="10" ngModel> -->
+        <div *ngIf="eName.invalid && eName.touched">
+            <p *ngIf="eName.errors.required" class="text-danger">Name is required</p>
+            <p *ngIf="eName.errors.minlength" class="text-danger">Minimum length should be 10</p>
+        </div>
     </div>
     
     <div class="form-group">
         <label for="salary">Salary</label> <br>
-        <input type="number" name="salary" #lname="ngModel" [(ngModel)]="list.salary" ngModel>
+        <input type="number" name="salary" #lname="ngModel" [(ngModel)]="list.salary" required ngModel>
     </div>
 
     <div class="form-group">
         <label for="joindate">JoinDate</label><br>
-        <input type="datetime-local" name="joinDate" [(ngModel)]="list.joinDate" ngModel>
+        <input type="datetime-local" name="joinDate" [(ngModel)]="list.joinDate" required ngModel>
     </div>
 
     <div class="form-group">
-        <button class="btn btn-primary my-3" type="submit">Update</button>
+        <button class="btn btn-primary my-3" [disabled]="!updateForm.valid" type="submit">Update</button>
     </div>
 
 </form>
