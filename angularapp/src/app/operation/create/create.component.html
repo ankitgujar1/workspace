@@ -3,17 +3,20 @@
 
     <div class="form-group">
         <label for="name">Name</label><br>
-        <input type="text" name="name" #fname="ngModel" ngModel>
+        <input type="text" name="name" #eName="ngModel" required minlength="10" ngModel>
+        <div *ngIf="eName.invalid && eName.touched">
+            <p *ngIf="eName.errors.required" class="text-danger">Name is required</p>
+        </div>
     </div>
     
     <div class="form-group">
         <label for="salary">Salary</label> <br>
-        <input type="number" name="salary" #lname="ngModel" ngModel>
+        <input type="number" name="salary" #eSalary="ngModel" ngModel>
     </div>
 
     <div class="form-group">
         <label for="joindate">JoinDate</label><br>
-        <input type="datetime-local" name="joinDate" ngModel>
+        <input type="datetime-local" name="joinDate" #eJoinDate="ngModel" ngModel>
     </div>
 
     <div class="form-group">
