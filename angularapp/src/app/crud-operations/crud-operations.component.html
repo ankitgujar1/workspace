@@ -113,7 +113,7 @@
 
 </form>
 
-<div *ngIf="!b">
+<div *ngIf="found">
 <table class="table table-striped">
     <tr>
         <th>ID</th>
@@ -130,7 +130,7 @@
 </table>
 </div>
 
-<div *ngIf="b">
+<div *ngIf="!found">
     <p>{{e}}</p>
-    </div>
+</div>
 

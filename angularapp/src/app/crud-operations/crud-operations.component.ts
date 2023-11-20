@@ -14,9 +14,9 @@ export class CrudOperationsComponent implements OnInit {
 
   listDataById: IEmployee[] = []
 
-  e:string="ss";
+  e:string="Not Found";
 
-  b:boolean=false;
+  found:boolean=false;
 
   constructor(private http: BackendService) {
     
@@ -55,10 +55,11 @@ export class CrudOperationsComponent implements OnInit {
 
     this.http.GetDataById(getByIdForm.value.id).subscribe(success => {
       this.listDataById = success;
+      this.found=true;
     },
-    error=>{
-      this.e="Not Found";
-      this.b=true;
+    ()=>{
+      // this.e="Not Found";
+      this.b=false;
     })
     console.log(this.listDataById)
   }
