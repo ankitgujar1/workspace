@@ -4,10 +4,7 @@
     <div class="form-group">
         <label for="name">Name</label><br>
         <input type="text" name="name" #eName="ngModel" required minlength="10" ngModel>
-        <div *ngIf="eName.invalid && eName.touched">
-            <p *ngIf="eName.errors.required" class="text-danger">Name is required</p>
-            <p *ngIf="eName.errors.minlength" class="text-danger">Minimum length should be 10</p>
-        </div>
+        
     </div>
     
     <div class="form-group">
