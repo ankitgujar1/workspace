@@ -5,27 +5,40 @@
         <label for="name">Name</label><br>
         <input type="text" name="name" #eName="ngModel" required minlength="10" ngModel>
         <div *ngIf="eName.invalid && eName.touched">
-            <p *ngIf="eName.errors.required">Name is required</p>
-            <p *ngIf="eName.errors.minlength">Name length should be 10</p>
+            <p *ngIf="eName.errors.required" class="text-danger">Name is required</p>
+            <p *ngIf="eName.errors.minlength" class="text-danger">Name length should be 10</p>
         </div>
+    </div>
+
+    <div class="form-group">
+        <label for="name">Email</label><br>
+        <input type="text" name="name" #lName="ngModel" required email  ngModel>
+        <div *ngIf="eName.invalid && eName.touched">
+            <p *ngIf="eName.errors.required" class="text-danger">Name is required</p>
+            <p *ngIf="eName.errors.email" class="text-danger">email format required</p> 
+        </div> 
     </div>
     
     <div class="form-group">
         <label for="salary">Salary</label> <br>
-        <input type="number" name="salary" #eSalary="ngModel" ngModel required minlength="4">
+        <input type="number" name="salary" #eSalary="ngModel" ngModel required>
         <div *ngIf="eSalary.invalid && eSalary.touched">
             <p *ngIf="eSalary.errors.required" class="text-danger">Salary is required</p>
-            <p *ngIf="eSalary.errors.minlength" class="text-danger">Salary should be greater than 10000</p>
+            <!-- <p *ngIf="eSalary.errors.minlength" class="text-danger">Salary should be greater than 10000</p> -->
         </div>
     </div>
 
     <div class="form-group">
         <label for="joindate">JoinDate</label><br>
         <input type="datetime-local" name="joinDate" #eJoinDate="ngModel" ngModel required>
+        <div *ngIf="eJoinDate.invalid && eJoinDate.touched">
+            <p *ngIf="eJoinDate.errors.required" class="text-danger">Salary is required</p>
+            <!-- <p *ngIf="eSalary.errors.minlength" class="text-danger">Salary should be greater than 10000</p> -->
+        </div>
     </div>
 
     <div class="form-group">
-        <button class="btn btn-primary my-3" type="submit" [disabled]="!postForm.valid">Submit</button>
+        <button class="btn btn-primary my-3" type="submit" [disabled]="postForm.invalid">Submit</button>
     </div>
 
 </form>
