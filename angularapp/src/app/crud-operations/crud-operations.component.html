@@ -113,7 +113,7 @@
 
 </form>
 
-
+<div *ngIf="!b">
 <table class="table table-striped">
     <tr>
         <th>ID</th>
@@ -128,4 +128,9 @@
         <td>{{listDataById.joinDate}}</td>
     </tr>
 </table>
+</div>
+
+<div *ngIf="b">
+    <p>{{e}}</p>
+    </div>
 

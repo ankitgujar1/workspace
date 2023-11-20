@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { BackendService } from '../backend.service';
 import { IEmployee } from '../backend.service'
+// import { error } from 'console';
 
 @Component({
   selector: 'app-crud-operations',
@@ -12,6 +13,10 @@ export class CrudOperationsComponent implements OnInit {
   listData: IEmployee[] = []
 
   listDataById: IEmployee[] = []
+
+  e:string="ss";
+
+  b:boolean=false;
 
   constructor(private http: BackendService) {
     
@@ -50,6 +55,10 @@ export class CrudOperationsComponent implements OnInit {
 
     this.http.GetDataById(getByIdForm.value.id).subscribe(success => {
       this.listDataById = success;
+    },
+    error=>{
+      this.e="Not Found";
+      this.b=true;
     })
     console.log(this.listDataById)
   }
